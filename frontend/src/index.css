@@ -1,0 +1,465 @@
+/* Importing Inter font from Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #F8F9FA;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Navigation */
+.main-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: #0077B6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+  font-size: 14px;
+}
+
+.main-nav .logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.main-nav .logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Loading Screen */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 16px;
+  color: #666;
+}
+
+.loading-screen .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #0077B6;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Patient Layout - Full screen with nav */
+.patient-layout {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-content {
+  flex: 1;
+  width: 100%;
+  padding: 0;
+}
+
+/* Container for chat - centered */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 20px;
+}
+
+.chatbot-popup{
+  position: relative;
+  width: 600px;
+  max-width: 95vw;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 128px rgba(0, 0, 0, 0.1),
+              0 32px 64px -48px rgba(0, 0, 0, 0.5);
+}
+
+.chatbot-popup .chat-header {
+
+  display: flex;
+  padding: 15px 22px;
+  align-items: center;
+  justify-content: space-between;
+  background: #0077B6;
+}
+
+.chat-header .header-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.header-info svg {
+  width: 35px;
+  height: 35px;
+  padding: 6px;
+  flex-shrink: 0;
+  fill: #0077B6;
+  background: #fff;
+  border-radius: 50%;
+  
+}
+
+.header-info .logo-text {
+  color: #fff;
+  font-size: 1.31rem;
+  font-weight: 600;
+  align-self: center;
+  align-items: center;
+}
+
+.chat-header button {
+  
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.9rem;
+  padding-top: 2px;
+  border-radius: 50%;
+  margin-right: -10px;
+  background: #005f8a;
+  transition: 0.2s ease;
+}
+
+.chat-header button:hover {
+  background: #005f8a;
+}
+
+.chat-body{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 560px;
+  overflow-y: auto;
+  padding: 25px 22px;
+  margin-bottom: 82px;
+  scrollbar-width: thin;
+  scrollbar-color: #B8D8E8 transparent;
+}
+
+.chat-body .message {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.chat-body .bot-message svg{
+
+  height: 35px;
+  width: 35px;
+  padding: 6px;
+  flex-shrink: 0;
+  fill: #fff;
+  background: #0077B6;
+  border-radius: 50%;
+  align-self: flex-end;
+  margin-bottom: 2px;
+}
+
+.chat-body .message .message-text {
+  padding: 12px 16px;
+  max-width: 75%;
+  word-wrap: break-word;
+  white-space: pre-line;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.chat-body .bot-message .message-text {
+  background: #E8F4F8;
+  border-radius: 13px 13px 13px 3px;
+
+}
+
+.chat-body .user-message{
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.chat-body .user-message .message-text {
+  background: #0077B6;
+  color: #fff;
+  border-radius: 13px 13px 3px 13px;
+}
+
+.chat-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  padding: 15px 22px 20px;
+}
+
+.chat-footer .chat-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 32px;
+  outline: 1px solid #CCCCE5;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.06);
+              ;
+}
+
+.chat-footer .chat-form:focus-within {
+  outline: 2px solid #0077B6;
+}
+
+.chat-form .message-input{
+
+  border: none;
+  outline: none;
+  width: 100%;
+  background: none;
+  height: 47px;
+  padding: 0 17px;
+  font-size: 0.95rem;
+}
+
+.chat-form button{
+  height: 35px;
+  width: 35px;
+  border: none;
+  display: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.15rem;
+  color: #fff;
+  flex-shrink: 0;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #0077B6;
+  transition: 0.2s ease;
+}
+
+.chat-form button:hover {
+  background: #005f8a;
+}
+
+.chat-form .message-input:valid~button{
+  display: block;
+}
+
+/* Loader animation styles */
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+  margin: 12px 16px; /* Add margin to align similarly to text */
+}
+@keyframes l5 {
+    0%  {box-shadow: 20px 0 #0077B6, -20px 0 #0077B622;background: #0077B6 }
+    33% {box-shadow: 20px 0 #0077B6, -20px 0 #0077B622;background: #0077B622}
+    66% {box-shadow: 20px 0 #0077B622,-20px 0 #0077B6; background: #0077B622}
+    100%{box-shadow: 20px 0 #0077B622,-20px 0 #0077B6; background: #0077B6 }
+}
+
+/* SQL Code Block Styles */
+.sql-section {
+  margin: 16px 0;
+  border: 1px solid #e1e5e9;
+  border-radius: 8px;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+.sql-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #e9ecef;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.sql-icon {
+  font-size: 16px;
+}
+
+.copy-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+  background: #dee2e6;
+}
+
+.sql-code-container {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #ffffff;
+}
+
+.sql-code {
+  margin: 0;
+  padding: 16px;
+  font-family: 'Courier New', Consolas, Monaco, monospace;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #2d3748;
+  background: transparent;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.sql-code code {
+  font-family: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+/* Responsive adjustments for SQL blocks */
+@media (max-width: 768px) {
+  .sql-code {
+    font-size: 0.8rem;
+    padding: 12px;
+  }
+  
+  .sql-header {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Make sure message text container can handle the new structure */
+.chat-body .message .message-text {
+  padding: 12px 16px;
+  max-width: 75%;
+  word-wrap: break-word;
+  white-space: pre-line;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Override white-space for SQL sections */
+.message-text .sql-section {
+  white-space: normal;
+}
+
+/* Upload button styles */
+.chat-form .upload-btn {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  min-width: 35px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.15rem;
+  color: #0077B6;
+  flex-shrink: 0;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: #E8F4F8;
+  transition: 0.2s ease;
+}
+
+.chat-form .upload-btn:hover {
+  background: #D0E8F0;
+  color: #005f8a;
+}
+
+.chat-form .upload-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Spinning animation for upload in progress */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.chat-form .upload-btn.uploading {
+  animation: spin 1s linear infinite;
+}
+
+
