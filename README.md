@@ -32,7 +32,7 @@
 - Provides instant responses to user symptoms and health questions.
 - After describing symptoms, the user receives practical advice and, if appropriate, a recommendation for a specialist based on the doctors available in the database. The user can then book an appointment with the suggested specialist either via chatbot or through the graphical interface.
 
-[![Symptom Checker Demo](assets/symptom_checker_thumbnail.png)](https://github.com/TiloccaS/HealthAssistant/tree/main/video/medical_knowledge.mp4)
+[![Watch the video](https://github.com/TiloccaS/HealthAssistant/blob/main/video/medical_knowledge.jpg)](https://github.com/TiloccaS/HealthAssistant/tree/main/video/medical_knowledge.mp4)
 
 ### Lab report analysis with abnormal value detection
 - The user can upload a lab report file. The system checks if the file is a PDF and smaller than 2MB. Only valid PDF files trigger the lab report analysis agent.
@@ -40,7 +40,7 @@
 - If the uploaded PDF is not a medical report, the agent notifies the user.
 - Users can upload other file types, but only PDF files activate the lab report analysis feature.
 
-[![Lab Report Analysis Demo](assets/lab_report_analysis_thumbnail.png)](https://github.com/TiloccaS/HealthAssistant/tree/main/video/analyze_lab_report.mp4)
+[![Watch the video](https://github.com/TiloccaS/HealthAssistant/blob/main/video/analyze_lab_report.jpg)](https://github.com/TiloccaS/HealthAssistant/tree/main/video/analyze_lab_report.mp4)
 
 
 ### Doctor and patient dashboards
@@ -49,11 +49,12 @@
 - The doctor can request a summary of the patient's main health issue, which is automatically extracted from the chat history by a dedicated agent.
 - Doctors also have access to the full chat history with each patient for better context and follow-up.
 
-[![Dashboard Demo](assets/dashboard_thumbnail.png)](https://github.com/TiloccaS/HealthAssistant/tree/main/video/book_appointment_doctor_dashboard.mp4)
+[![Watch the video](https://github.com/TiloccaS/HealthAssistant/blob/main/video/book_appointment_doctor_dashboard.jpg)](https://github.com/TiloccaS/HealthAssistant/tree/main/video/book_appointment_doctor_dashboard.mp4)
 
 ### Appointment booking system
 - Book, view, and manage appointments with available doctors. Users can also manage appointments directly via chat: view available slots for a specific doctor, book a specific slot, view their own reservations, or cancel existing bookings.
-[![Appointment Booking Demo](assets/appointment_booking_thumbnail.png)](https://github.com/TiloccaS/HealthAssistant/tree/main/video/query_by_chatbot.mp4)
+
+[![Watch the video](https://github.com/TiloccaS/HealthAssistant/blob/main/video/book_appointment_doctor_dashboard.jpg)](https://github.com/TiloccaS/HealthAssistant/tree/main/video/query_by_chatbot.mp4)
 
 
 
