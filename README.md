@@ -89,7 +89,7 @@ HealthAssistant/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/HealthAssistant.git
+   git clone https://github.com/TiloccaS/HealthAssistant.git
    cd HealthAssistant
    ```
 
